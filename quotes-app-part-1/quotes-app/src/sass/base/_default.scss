@@ -1,0 +1,144 @@
+html,
+body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+body {
+	position: relative;
+}
+main {
+	height: 90vh;
+}
+header {
+	background-color: $blue-dark;
+	.nav-links {
+		width: 555px;
+		ul {
+			li > a {
+				color: #fff;
+				font-weight: 500;
+			}
+		}
+	}
+}
+
+.home-page {
+	.view-quotes {
+		.anonymous,
+		.login-signup {
+			a {
+				background-color: $blue;
+				text-decoration: dashed;
+				padding: 15px 20px;
+				&:hover {
+					background-color: $light-blue;
+				}
+			}
+		}
+		.login-signup {
+			.login {
+				border-right: 2px solid $white;
+			}
+		}
+	}
+}
+.new-quote-block {
+	display: flex;
+	justify-content: end;
+	margin: 10px 0;
+}
+.addQuotebtn {
+	background-color: #305e83;
+	color: #fff;
+	border: 3px solid #5b687d;
+}
+
+.quotes-container-block {
+	padding: 15px;
+	height: 700px;
+	overflow-y: scroll;
+	border: 1px solid $grey;
+	box-shadow: 0px 0px 8px #edeaea;
+	h2 {
+		background-color: $grey;
+		padding: 5px;
+	}
+	.quote {
+		padding: 15px;
+		box-shadow: 0px 2px 3px #f5f5f5;
+		.author {
+			padding-left: 35px;
+			font-style: italic;
+		}
+		.blockquote {
+			p {
+				padding-left: 12px;
+				position: relative;
+				&::before {
+					content: '';
+					background-image: url(/src/images/quote-start.png);
+					display: block;
+					position: absolute;
+					width: 10px;
+					height: 8px;
+					background-repeat: no-repeat;
+					background-size: contain;
+					left: 0;
+					top: 4px;
+				}
+				&::after {
+					content: '';
+					background-image: url(/src/images/quote-end.png);
+					display: inline;
+					position: absolute;
+					width: 10px;
+					height: 8px;
+					background-repeat: no-repeat;
+					background-size: contain;
+					bottom: 1px;
+					margin-left: 5px;
+				}
+			}
+		}
+	}
+}
+.login-page {
+	.sign-up {
+		padding-left: 5px;
+	}
+}
+
+.main-sign-up,
+.login-page {
+	width: 100%;
+	text-align: center;
+	border: 1px solid #ebe7e7;
+	box-shadow: 0 0 3px #e9e4e4;
+	margin: 15px 0 0;
+	h2 {
+		padding-top: 15px;
+	}
+	.submit {
+		background-color: #305e83;
+		color: #fff;
+		border: 3px solid #5b687d;
+	}
+}
+footer {
+	position: fixed;
+	bottom: 0;
+	min-height: 100px;
+	display: flex;
+	align-items: center;
+	width: 100%;
+	background-color: $grey;
+}
+
+.error {
+	color: red;
+}
+
+.w-50 {
+	margin: 0 auto;
+}
