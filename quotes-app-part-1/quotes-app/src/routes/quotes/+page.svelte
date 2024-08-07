@@ -36,24 +36,7 @@
 		});
 		displayQuotes(quotesPromise);
 	}
-	// if (token.length > 0) {
-	// 	useToken(token, quotesURL);
-	// 	const anonymous = document.querySelector('#anonymous');
-	// 	const loginSignup = document.querySelector('#loginSignup');
-	// 	anonymous?.remove();
-	// 	loginSignup?.remove();
-	// } else {
-	// const quotesPromise = fetchData(quotesURL, headerData);
-	// quotesPromise.then((data) => {
-	// 	if (data.statusCode > 200) {
-	// 		showClass('showLoginBlock');
-	// 	}
-	// 	console.log(data.statusCode);
-	// });
-	// displayQuotes(quotesPromise);
-	// }
 	function addNewQuoteData() {
-		// showClass('newQuoteContainer');
 		showClass('closeBtn');
 	}
 	function saveQuote() {
@@ -67,10 +50,6 @@
 				2000;
 		});
 	}
-	// function closeNewQuoteData() {
-	// 	document.getElementById('newQuoteContainer')?.classList.add('d-none');
-	// 	document.getElementById('closeBtn')?.classList.add('d-none');
-	// }
 </script>
 
 {#if token}
@@ -85,7 +64,6 @@
 		>
 			Add Quotes
 		</button>
-		<!-- <button id="closeBtn" class="d-none" on:click={closeNewQuoteData}>close</button> -->
 	</div>
 {/if}
 
@@ -138,7 +116,6 @@
 							class="w-100"
 						/>
 					</div>
-					<!-- <button id="saveQuote" class="d-block" on:click={saveQuote}>Save</button> -->
 				</div>
 			</div>
 			<div class="modal-footer">
