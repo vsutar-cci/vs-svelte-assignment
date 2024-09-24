@@ -1,9 +1,9 @@
 <script lang="ts">
 	import { fetchData } from '../../apiRequest/callAPI';
 	import EnvConfig from '../../constants/env';
-	import { showClass } from '../../utilityCode/utility';
-	import { addNewQuote } from '../../quotesDisplayData/addNewQuotes';
-	import { displayQuotes, useToken } from '../../quotesDisplayData/displayQuotes';
+	import { showClass, hideClass } from '../../utilityCode/utility';
+	import { addNewQuote } from '../../apiResponse/quotesDisplayData/addNewQuotes';
+	import { displayQuotes, useToken } from '../../apiResponse/quotesDisplayData/displayQuotes';
 	import { type AddNewQuote, type AddNewQuoteResponse } from '../../constants/constant';
 	import { accessTokenStore } from '../../stores/userStores';
 
@@ -41,14 +41,19 @@
 	}
 	function saveQuote() {
 		addNewQuote(newQuote, token, quotesURL);
-		setInterval(() => {
-			(newQuote = {
-				quote: '',
-				tags: '',
-				author: ''
-			}),
-				2000;
-		});
+		if (!newQuote.quote || !newQuote.author) {
+			showClass('showErrorMessage');
+		} else {
+			hideClass('showErrorMessage');
+			setInterval(() => {
+				(newQuote = {
+					quote: '',
+					tags: '',
+					author: ''
+				}),
+					2000;
+			});
+		}
 	}
 </script>
 
@@ -119,7 +124,8 @@
 				</div>
 			</div>
 			<div class="modal-footer">
-				<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+				<p id="showErrorMessage" class="d-none error">Please enter a quote and an author</p>
+				<!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
 				<button type="button" id="saveQuote" class="btn btn-primary" on:click={saveQuote}>
 					Save changes
 				</button>
@@ -128,7 +134,7 @@
 	</div>
 </div>
 
-<div id="newQuoteContainer" class="d-none">
+<!-- <div id="newQuoteContainer" class="d-none">
 	<label for="quote">quote:</label>
 	<input
 		type="text"
@@ -146,7 +152,7 @@
 		placeholder="Enter Author name"
 	/>
 	<button id="saveQuote" class="d-block" on:click={saveQuote}>Save</button>
-</div>
+</div> -->
 <div id="quotes-container" class="quotes-container-block"></div>
 <div id="showLoginBlock" class="d-none">
 	<p>You have exhausted the API calls limit. Please login or signup to view Quotes.</p>

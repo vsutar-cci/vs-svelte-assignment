@@ -1,4 +1,4 @@
-import { fetchData } from '../apiRequest/callAPI';
+import { fetchData } from '../../apiRequest/callAPI';
 export function displayQuotes(quotesPromise: Promise<{ quote: string; author: string }[]>) {
 	quotesPromise
 		.then((quotes) => {

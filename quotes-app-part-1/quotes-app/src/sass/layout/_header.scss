@@ -1,0 +1,20 @@
+header {
+	background-color: #062149;
+	padding: 18px 0 24px;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	z-index: 1;
+	.nav-links {
+		width: 690px;
+		ul {
+			li > a {
+				color: #fff;
+				font-weight: 500;
+			}
+		}
+		.btn {
+			color: white;
+		}
+	}
+}

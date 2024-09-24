@@ -33,7 +33,6 @@
 
 <div class="login-page">
 	<h2 class="mb-5">Please login</h2>
-
 	<form class="login-form" on:submit={verifyUser}>
 		<div class="mb-5">
 			<label for="username">Username:</label>
@@ -62,7 +61,9 @@
 		<button type="submit" class="submit">Submit</button>
 		<div class="pt-4">
 			<a href="/" class="cancel">Cancel</a>
-			<a href="/sign-up" class="sign-up pl-2">SignUp</a>
+			<span>Don't have an account?</span><a href="/sign-up" class="sign-up pl-2 link-dangerss"
+				>Register</a
+			>
 		</div>
 
 		<p id="successMessage" class="d-none">You're logged in</p>

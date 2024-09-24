@@ -41,7 +41,7 @@
 <div class="main-sign-up">
 	<h2 class="pb-4">Please Sign up</h2>
 	<form class="signup-form" on:submit={verifyNewUser}>
-		<div class="w-50">
+		<div>
 			<div class="mb-4">
 				<label for="username">Firstname:</label>
 				<input
@@ -65,7 +65,7 @@
 				<p id="lastNameError" class="d-none error">Invalid lastname Entered</p>
 			</div>
 			<div class="mb-4">
-				<label for="password">Email:</label>
+				<label for="password" class="d-block">Email:</label>
 				<input
 					type="text"
 					id="username"
@@ -88,10 +88,10 @@
 				/>
 				<p id="passwordError" class="d-none error">Invalid Password Entered</p>
 			</div>
-			<button type="submit" class="submit">SignUp</button>
+			<button type="submit" class="submit mb-4">SignUp</button>
 			<div class="div">
 				<a href="/" class="cancel">Cancel</a>
-				<a href="/login" class="login">Login</a>
+				<span>Already have an account? </span><a href="/login" class="login">Login here</a>
 			</div>
 			<p id="showErrorMessage" class="d-none error">User already exists</p>
 			<p id="success" class="d-none">You're registered.</p>

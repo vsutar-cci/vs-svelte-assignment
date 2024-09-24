@@ -7,21 +7,23 @@ body {
 
 body {
   position: relative;
+  overflow-x: hidden;
+  background: url("/src/images/bg.jpg") no-repeat center center/cover;
 }
 
 main {
-  height: 90vh;
+  height: 84vh;
+  margin: 120px 30px 30px;
+  border-radius: 50px;
+  background-color: white;
 }
 
-header {
-  background-color: #1a67a5;
+a {
+  font-size: 18px;
 }
-header .nav-links {
-  width: 555px;
-}
-header .nav-links ul li > a {
-  color: #fff;
-  font-weight: 500;
+
+.container {
+  padding-top: 2px;
 }
 
 .home-page .view-quotes .anonymous a,
@@ -37,6 +39,10 @@ header .nav-links ul li > a {
 .home-page .view-quotes .login-signup .login {
   border-right: 2px solid #ffffff;
 }
+.home-page p {
+  max-width: 900px;
+  margin: 0 auto;
+}
 
 .new-quote-block {
   display: flex;
@@ -51,19 +57,29 @@ header .nav-links ul li > a {
 }
 
 .quotes-container-block {
-  padding: 15px;
-  height: 700px;
+  padding: 0 81px 15px;
+  height: 70vh;
   overflow-y: scroll;
-  border: 1px solid #d7d7d7;
-  box-shadow: 0px 0px 8px #edeaea;
+  border: 1px solid rgb(215, 215, 215);
+  box-shadow: rgb(237, 234, 234) 0px 0px 8px;
+  width: 95%;
+  margin: 0 auto;
+  border-radius: 50px;
 }
 .quotes-container-block h2 {
-  background-color: #d7d7d7;
+  background-color: #e30140;
   padding: 5px;
+  position: fixed;
+  width: 69.3%;
+  z-index: 2;
+  color: white;
 }
 .quotes-container-block .quote {
   padding: 15px;
   box-shadow: 0px 2px 3px #f5f5f5;
+}
+.quotes-container-block .quote:nth-of-type(1) {
+  margin-top: 50px;
 }
 .quotes-container-block .quote .author {
   padding-left: 35px;
@@ -104,11 +120,12 @@ header .nav-links ul li > a {
 
 .main-sign-up,
 .login-page {
-  width: 100%;
-  text-align: center;
+  width: 40%;
   border: 1px solid #ebe7e7;
   box-shadow: 0 0 3px #e9e4e4;
-  margin: 15px 0 0;
+  margin: 15px auto 0;
+  padding: 15px;
+  position: relative;
 }
 .main-sign-up h2,
 .login-page h2 {
@@ -116,19 +133,25 @@ header .nav-links ul li > a {
 }
 .main-sign-up .submit,
 .login-page .submit {
-  background-color: #305e83;
+  background-color: #3985c1;
   color: #fff;
-  border: 3px solid #5b687d;
+  border: 3px solid #1c62d3;
+  padding: 10px;
+  border-radius: 4px;
+  width: 90%;
 }
-
-footer {
-  position: fixed;
-  bottom: 0;
-  min-height: 100px;
-  display: flex;
-  align-items: center;
-  width: 100%;
-  background-color: #d7d7d7;
+.main-sign-up input,
+.login-page input {
+  width: 90%;
+  padding: 10px;
+}
+.main-sign-up .cancel,
+.login-page .cancel {
+  position: absolute;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-right: 10px;
 }
 
 .error {
@@ -137,4 +160,39 @@ footer {
 
 .w-50 {
   margin: 0 auto;
+}
+
+.hide {
+  display: none;
+}
+
+header {
+  background-color: #062149;
+  padding: 18px 0 24px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1;
+}
+header .nav-links {
+  width: 690px;
+}
+header .nav-links ul li > a {
+  color: #fff;
+  font-weight: 500;
+}
+header .nav-links .btn {
+  color: white;
+}
+
+footer {
+  position: relative;
+  bottom: 0;
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: black;
+  box-shadow: -3px -5px 3px #030522;
+  color: white;
 }/*# sourceMappingURL=style.css.map */

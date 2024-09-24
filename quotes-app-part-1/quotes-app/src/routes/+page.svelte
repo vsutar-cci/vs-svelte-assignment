@@ -14,15 +14,9 @@
 		<!-- svelte-ignore a11y-click-events-have-key-events -->
 		<!-- svelte-ignore a11y-no-static-element-interactions -->
 		<div class="row text-xl-center">
-			<div class="col col-xl-6">
+			<div class="col">
 				<div class="anonymous">
-					<a href="/quotes" class="badge" id="anonymous">View Quotes as an Anonymous user</a>
-				</div>
-			</div>
-			<div class="col col-xl-6">
-				<div class="login-signup mt-3 mt-xl-0 d-flex justify-content-xl-center" id="loginSignup">
-					<a href="/login" class="badge login">Login</a>
-					<a href="/sign-up" class="badge">signup</a>
+					<a href="/quotes" class="badge" id="anonymous">View Quotes</a>
 				</div>
 			</div>
 		</div>

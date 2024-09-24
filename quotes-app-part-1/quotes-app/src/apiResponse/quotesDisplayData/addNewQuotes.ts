@@ -1,7 +1,7 @@
-import { isObjectNotEmpty } from '../utilityCode/utility';
-import { type AddNewQuoteResponse } from '../constants/constant';
-import { fetchData } from '../apiRequest/callAPI';
-import { useToken } from '../quotesDisplayData/displayQuotes';
+import { isObjectNotEmpty } from '../../utilityCode/utility';
+import { type AddNewQuoteResponse } from '../../constants/constant';
+import { fetchData } from '../../apiRequest/callAPI';
+import { useToken } from './displayQuotes';
 export function addNewQuote(quotesObj: object, token: string, url: string) {
 	if (isObjectNotEmpty(quotesObj)) {
 		storeNewQuote(quotesObj, token, url);
